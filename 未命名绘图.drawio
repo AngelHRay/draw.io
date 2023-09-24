@@ -1,9 +1,71 @@
-<mxfile host="app.diagrams.net" modified="2023-09-24T02:30:33.426Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" version="21.8.1" etag="OP6w6CRtHIWOJUd_qJYC" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-24T02:45:04.494Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="QDlpoX4S3w3WgoUkNiSN" version="21.8.1" type="github">
   <diagram name="第 1 页" id="eGQYAnPUL8QZylnuPs7z">
-    <mxGraphModel>
+    <mxGraphModel dx="1221" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-1" target="VXAlaiL4U9Pdzu3FPUAU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-1" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="395" y="90" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="医生在operator side输入期望位姿" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="330" y="240" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="OS将期望位姿信号发送给robot（patient side）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="380" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="在给定线性约束条件下，robot根据当前位姿和OS期望位姿计算joint-velocity&amp;nbsp;reference&amp;nbsp;signal（quadratic-programming (QP，二次规划)）。约束条件：1.将关节速度保持在合理范围；2.将仪器轴限制在entry-sphere中心附近（避免损伤）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="780" width="350" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-5" target="VXAlaiL4U9Pdzu3FPUAU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-5" value="&#xa;&lt;span style=&quot;color: rgb(50, 50, 50); font-family: 微软雅黑; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(255, 255, 255, 0.01); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;计算平移损失函数&lt;/span&gt;&#xa;&#xa;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="550" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="455" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="计算旋转损失函数" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="395" y="550" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-7" target="VXAlaiL4U9Pdzu3FPUAU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-7" value="计算阻尼损失函数" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="750" y="550" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-8" target="VXAlaiL4U9Pdzu3FPUAU-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="445" y="1090" />
+              <mxPoint x="30" y="1090" />
+              <mxPoint x="30" y="403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="将信号交由robot的joint-velocity controllers，并控制机器人位姿" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="980" width="270" height="90" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
