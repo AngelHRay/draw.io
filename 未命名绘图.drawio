@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-24T03:03:02.327Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="F4lt896ebOSs9St1EI38" version="21.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-24T03:38:32.383Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="y_h0WCh2ZJ4lUM5Cw-kj" version="21.8.1" type="github">
   <diagram name="第 1 页" id="eGQYAnPUL8QZylnuPs7z">
     <mxGraphModel dx="1221" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
@@ -13,19 +13,19 @@
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="needle-size, precurved concentric tube manipulators 包含两个arm：needle arm和manipulator arm" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="利用CNN（GoogleNet）识别缝合线尖端，将获取的boundbox输入LSTM中，由LSTM识别出置信度最高的boundbox，将其确定为缝合线尖端的位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="200" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="concentric tube manipulators经由尿道到达指定位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="利用二阶高斯filter处理图像，去除噪声并增强曲线信息" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="340" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="manipulator arm将缝合线放置到needle arm尖端的回收篮上" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="在到达时间图上，缝合线边缘的速度是最快的，背景速度最慢，因此从缝合线尖端开始，沿着最短路径求出缝合线的轮廓（这个过程是在左右相机各自的2D平面完成的）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="660" width="270" height="100" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-4">
@@ -33,30 +33,17 @@
             <mxPoint x="455" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="manipulator arm利用forceps夹住膀胱壁，needle arm穿刺过膀胱壁" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="利用比fast marching method（FMM）更好的MFMM计算图像的到达时间图（arrive time map）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="490" width="270" height="110" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-8" target="VXAlaiL4U9Pdzu3FPUAU-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="needle arm携带缝合线穿过膀胱壁和尿道壁" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="利用左右相机的图像构造缝合线3D坐标，将缝合线划分为数个切割点，左右图像的切割点一一匹配" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="810" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-21" target="VXAlaiL4U9Pdzu3FPUAU-6">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="445" y="1070" />
-              <mxPoint x="290" y="1070" />
-              <mxPoint x="290" y="470" />
-              <mxPoint x="445" y="470" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-21" value="manipulator arm将缝合线拉扯到下一个缝合位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-21" value="匹配完成后，利用双目视觉公式求出3D坐标（基于焦距和基线长度）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="960" width="270" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-22" value="旋转concentric tube manipulators，到达下一个缝合位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="1270" width="270" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
