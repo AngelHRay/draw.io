@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-24T06:21:44.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="wzNgPKD5QSk1g5NRkCQc" version="21.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-24T06:43:33.159Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="-eA-Mb3HpVCxntdrFZCG" version="21.8.1" type="github">
   <diagram name="第 1 页" id="eGQYAnPUL8QZylnuPs7z">
     <mxGraphModel dx="1221" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
@@ -19,50 +19,83 @@
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="利用各个摄像机和机器人等构建坐标系，求出腹腔镜尖端指向目标位置的的单位向量，目标位置是左右机械臂尖端的空间中间位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="给定抓住针的位置和针的朝向，计算三个性能指标" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="200" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="得到当前位置和期望位置，进行机器人运动" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="700" width="270" height="100" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-78">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="455" y="740" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-79">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="三个部分线性组合得到7维扭矩输入向量\(T_i\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="540" width="270" height="110" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="缝合入口点选择" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="270" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-37" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="395" y="830" width="100" height="60" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-76">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-37">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="445" y="1020" as="sourcePoint" />
-          </mxGeometry>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="三个部分线性组合得到性能指标\(O\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="540" width="270" height="110" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-65" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-65" value="计算主任务扭矩\(T_L\)，其用于将腹腔镜移动到目标位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="395" y="345" width="100" height="100" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-65" value="\(W_{\theta}\)衡量灵敏度，避免角度达到极限而导致灵敏度下降" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="373.75" y="362.5" width="142.5" height="67.5" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-66" target="VXAlaiL4U9Pdzu3FPUAU-6">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="660" y="480" />
-              <mxPoint x="445" y="480" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-66" target="VXAlaiL4U9Pdzu3FPUAU-6">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-66" value="计算elbow motion限制扭矩\(T_{\aleph}\)，其用于限制腹腔镜的转动角度" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="610" y="340" width="100" height="100" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-66" value="\(W_{tau}\)衡量转矩" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="360" width="110" height="70" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-68" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-68" value="计算7维Coriolis, Centrifugal and the gravity compensation torques\(\hat{H}(q_{curr},\dot{q}_{curr})\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="130" y="345" width="190" height="90" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-68" target="VXAlaiL4U9Pdzu3FPUAU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-68" value="\(W_{\mu}\)衡量可操作性，即针的可达空间、操作空间的合理性" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="130" y="362.5" width="170" height="67.5" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-76" target="VXAlaiL4U9Pdzu3FPUAU-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-76" value="grasper抓针位置选择" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="710" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-77" value="对每个可能的针抓位置，计算性能指标\(O\)，求出最大值者为最优位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="675" y="860" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-78" target="VXAlaiL4U9Pdzu3FPUAU-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-78" value="needle grasp robustness" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="830" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-79" target="VXAlaiL4U9Pdzu3FPUAU-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-79" value="target location robustness" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="830" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-80" target="VXAlaiL4U9Pdzu3FPUAU-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-80" value="计算\(W_{\mu}\)在insertion阶段、extraction阶段和knot tying阶段的值，代表给定针的可操作性" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1030" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-81" value="对于所有可能的入口值，求出最大值为最优者" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1160" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-82" value="对于所有可能的目标位置，求出性能指标\(S\)，求出最大值为最优者" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1160" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-83" target="VXAlaiL4U9Pdzu3FPUAU-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-83" value="计算\(W_{\mu}\)在insertion阶段、extraction阶段和knot tying阶段的值，代表给定针的可操作性" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1030" width="110" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
