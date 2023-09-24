@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-24T05:59:18.025Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="dm-R09GgtwKaKy5MPlRv" version="21.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-24T06:21:44.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="wzNgPKD5QSk1g5NRkCQc" version="21.8.1" type="github">
   <diagram name="第 1 页" id="eGQYAnPUL8QZylnuPs7z">
     <mxGraphModel dx="1221" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
@@ -10,75 +10,59 @@
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-1" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="395" y="90" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-3">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-68">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="利用FEM构造VT shape映射到suture shape的函数，在得到足够多的映射后，构造suture shape到VT shape的函数（Barycentric interpolation插值法）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="利用各个摄像机和机器人等构建坐标系，求出腹腔镜尖端指向目标位置的的单位向量，目标位置是左右机械臂尖端的空间中间位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="200" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-6">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="445" y="440" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="给定suture shape后，设计VT shape" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="340" width="270" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="然后将针从从frantal plate上的needle hole穿过，穿过供体角膜并完成缝合" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="630" width="270" height="100" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="得到当前位置和期望位置，进行机器人运动" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="700" width="270" height="100" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="455" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="首先用负压把供体角膜的边缘吸起来，贴在side plate上（side plate的形状和深度是固定的，由VT shape给出）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="470" width="270" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-8" target="VXAlaiL4U9Pdzu3FPUAU-51">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="465" y="1200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="释放负压，缝合线就按照suture shape完成缝合，组织恢复到原来形状" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="800" width="270" height="90" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="三个部分线性组合得到7维扭矩输入向量\(T_i\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="540" width="270" height="110" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-37" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="395" y="1100" width="100" height="60" as="geometry" />
+          <mxGeometry x="395" y="830" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-37">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="1020" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-65" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-6">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-65" value="计算主任务扭矩\(T_L\)，其用于将腹腔镜移动到目标位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="395" y="345" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-66" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="120" y="980" />
-              <mxPoint x="120" y="450" />
-              <mxPoint x="445" y="450" />
+              <mxPoint x="660" y="480" />
+              <mxPoint x="445" y="480" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-63" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-62">
-          <mxGeometry x="-0.7975" y="4" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-66" value="计算elbow motion限制扭矩\(T_{\aleph}\)，其用于限制腹腔镜的转动角度" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="340" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-51" value="是否全部针已经缝合完成" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="367.5" y="940" width="155" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-37">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-68" target="VXAlaiL4U9Pdzu3FPUAU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-57" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-52">
-          <mxGeometry x="-0.2381" y="4" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-61" value="vacuum tweezer（VT）：真空镊子" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="660" y="140" width="270" height="90" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-68" value="计算7维Coriolis, Centrifugal and the gravity compensation torques\(\hat{H}(q_{curr},\dot{q}_{curr})\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="130" y="345" width="190" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
