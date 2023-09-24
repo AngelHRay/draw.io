@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-24T04:27:28.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="0VFKQDH6TMzKUUd7kRlv" version="21.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-24T05:50:10.310Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="7cp0Y9g-gwZ3l-4XJwBV" version="21.8.1" type="github">
   <diagram name="第 1 页" id="eGQYAnPUL8QZylnuPs7z">
     <mxGraphModel dx="1221" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
@@ -13,105 +13,89 @@
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-2" target="VXAlaiL4U9Pdzu3FPUAU-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="本文有A1和A2两个机械臂，医生操纵A1进行插入，机器操纵A2完成拔针和递针操作；利用CNN来识别状态" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-2" value="确定最佳路径：4维针参数包括（针中心x坐标，针中心y坐标，针直径，针形状）；6维缝合参数包括插入角度、理想和实际插入位置的距离、缝合深度、缝合对称性、插出角度、理想和实际插出位置的距离）" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="200" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-27">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-3" target="VXAlaiL4U9Pdzu3FPUAU-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="440" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="医生操纵A1将针刺入组织中" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-3" value="将4维针参数映射成6维缝合参数，然后用映射后的缝合参数和期望缝合参数作差，计算其差值的优化系数向量" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="310" y="340" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="A2移动到目标位置并尝试拔针" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="870" width="270" height="100" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-4" value="将拔针臂移动到目标位置尝试拔针" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="630" width="270" height="100" as="geometry" />
         </mxCell>
         <mxCell id="VXAlaiL4U9Pdzu3FPUAU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-6" target="VXAlaiL4U9Pdzu3FPUAU-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="455" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="计算A2的目标位置和姿势，目标位置为A1穿出组织后的针尖端位置。需要计算三个位置，用于容错" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="710" width="270" height="110" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-6" value="利用摄像机获取的图像信息来辅助控制机器人运动，将插针臂移动到目标位置进行插针" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="270" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-8" target="VXAlaiL4U9Pdzu3FPUAU-21">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-8" target="VXAlaiL4U9Pdzu3FPUAU-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="拔针臂将针移动到下一个缝合入口点位置，交给插针臂" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="920" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-37" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="395" y="1220" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-50" target="VXAlaiL4U9Pdzu3FPUAU-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-8" value="A2移动到下一个缝合位置，将针递交给A1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="1168" width="270" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-21" target="VXAlaiL4U9Pdzu3FPUAU-37">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-21" value="医生操纵A1抓住A2递过来的针，当A1抓住针后，A2返回初始位置" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="310" y="1348" width="270" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-27" target="VXAlaiL4U9Pdzu3FPUAU-6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-34" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-31">
-          <mxGeometry x="-0.2033" y="-2" relative="1" as="geometry">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-55" value="yse" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-53">
+          <mxGeometry x="0.1636" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-27" target="VXAlaiL4U9Pdzu3FPUAU-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-33" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-32">
-          <mxGeometry x="-0.1016" y="1" relative="1" as="geometry">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-54" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-50" target="VXAlaiL4U9Pdzu3FPUAU-4">
+          <mxGeometry x="0.0022" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="830" />
+              <mxPoint x="680" y="680" />
+            </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-27" value="state estimator读取内窥镜图像，利用YOLOv3识别针图像，将结果输入标准CNN中来进行分类，进行状态判断（后续同理）。判断是否穿透（penetration）" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="270" y="440" width="350" height="210" as="geometry" />
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-50" value="拔针成功" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="395" y="780" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-28" target="VXAlaiL4U9Pdzu3FPUAU-8">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-37">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-39" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-38">
-          <mxGeometry x="0.0571" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-28" value="state estimator判断拔针是否成功" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="320" y="998" width="250" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-29" target="VXAlaiL4U9Pdzu3FPUAU-37">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="800" y="1468" />
-              <mxPoint x="445" y="1468" />
+              <mxPoint x="180" y="1100" />
+              <mxPoint x="180" y="180" />
+              <mxPoint x="445" y="180" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-44" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-43">
-          <mxGeometry x="-0.4824" y="4" relative="1" as="geometry">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-60" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-58">
+          <mxGeometry x="-0.4406" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-29" target="VXAlaiL4U9Pdzu3FPUAU-4">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-51" value="是否全部针已经缝合完成" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="1060" width="155" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-51" target="VXAlaiL4U9Pdzu3FPUAU-37">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-47" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-46">
-          <mxGeometry x="-0.326" y="1" relative="1" as="geometry">
+        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-57" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-52">
+          <mxGeometry x="-0.2381" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-29" value="是否三次拔针都失败了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="670" y="974" width="260" height="148" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-28" target="VXAlaiL4U9Pdzu3FPUAU-29">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-36" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VXAlaiL4U9Pdzu3FPUAU-35">
-          <mxGeometry x="-0.3267" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-37" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="395" y="1508" width="100" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="VXAlaiL4U9Pdzu3FPUAU-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VXAlaiL4U9Pdzu3FPUAU-4" target="VXAlaiL4U9Pdzu3FPUAU-28">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
