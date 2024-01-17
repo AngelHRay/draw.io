@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2024-01-17T11:40:48.898Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.17" etag="sV517DULtl0A8zt6uAwF" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-17T12:01:35.721Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="-DpBHu1KKyC013HpJmJw" version="22.1.17" type="github">
   <diagram name="第 1 页" id="P_fQ2WuIPNBgrpiUpPbC">
-    <mxGraphModel>
+    <mxGraphModel dx="1221" dy="5299" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="e8ZI6Lg5yfZCw3XqL3-c-1" value="$$M_i(q_i)\ddot{q}_i+C_i(q_i,\dot{q}_i)\dot{q}_i+G_i()q_i+B_i(q_i,\dot{q_i})=\tau_i+J^T_iF_{h/e1/e2}$$&lt;br&gt;对slave1,2：$$\tau_i=\tau_{vi}+\tau_{fi}+\Omega_{si}(q_i,\dot{q_i},\ddot{q}_i)$$&lt;br&gt;对master：$$\tau_m=\kappa_f\tau_{S_m}+J^T_m(-F_{e1tr}-F^*_h)+\Omega_{m}(q_m,\dot{q_m},\ddot{q}_m)$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="170" width="480" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="e8ZI6Lg5yfZCw3XqL3-c-2" value="&lt;p style=&quot;line-height: 120%;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;滑膜面：$$S_{sj}=C_1sig(e_{sj})^{\gamma_1}+C_2sig(e_{sj})^{\gamma_2}$$&lt;br&gt;滑膜控制器：$$\tau_{S_{sj}}=-d_1sig(S_{sj}&lt;br&gt;)^{\overline{\omega_1}}-d_2sig(S_{sj}&lt;br&gt;)^{\overline{\omega_2}}&lt;br&gt;-d_3S_{sj}&lt;br&gt;$$&lt;br&gt;其中$$e_{sj}=^1e_{sj}+^2e_{sj}&lt;br&gt;$$&lt;br&gt;$$^1e_{sj}=J^+_{sj}(X_{stj}-^dX_{stj}&lt;br&gt;)$$&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 120%;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;$$&lt;/font&gt;^2e_{sj}=&lt;/p&gt;J^+_{fsj}(X_{sfj}-^dX_{sfj}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;)&lt;span style=&quot;background-color: initial;&quot;&gt;$$&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="-10" width="610" height="400" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
